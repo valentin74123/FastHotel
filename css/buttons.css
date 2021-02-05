@@ -1,0 +1,55 @@
+.button-brown {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-light-white);
+    text-transform: uppercase;
+    background-color: var(--basic-light-brown);
+    border: none;
+}
+
+.button-brown:hover,
+.button-brown:focus {
+    background-color: var(--basic-brown);
+}
+  
+.button-brown:active {
+    background-color: var(--basic-dark-brown);
+    color: rgba(255, 255, 255, 0.3)
+}
+
+
+.button-light-blue {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-light-white);
+    text-transform: uppercase;
+    background-color: var(--basic-light-blue);
+    border: none;
+}
+  
+.button-light-blue:hover,
+.button-light-blue:focus {
+    background-color: var(--basic-blue);
+}
+  
+.button-light-blue:active {
+    background-color: var(--basic-dark-blue);
+    color: rgba(255, 255, 255, 0.3)
+}
+
+
+.button-white {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--basic-light-white);
+    background-color: transparent;
+    border: 2px solid var(--basic-light-white);
+}
+  
+.button-white:hover,
+.button-white:focus {
+    background-color: var(--basic-light-white);
+    color: var(--basic-dark-black);
+    border: 2px solid var(--basic-light-white);
+}
