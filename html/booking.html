@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html  class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast Hotels</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style-importsss.css" rel="stylesheet">
+  </head>
+  <body class="page-body">
+
+    <header class="main-header">
+      <nav class="main-header__navigation">
+
+        <div class="main-header__wrapper">
+          <ul class="main-header__site-navigation container">
+            <a href="" class="main-header__logo"><img src="img/logo3.png" width="200" height="70" alt="Логотип"></a>
+            <li><a href="index.html">Информация</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="catalog.html">Гостиницы</a></li>
+            <li class="main-header__navigation--active"><a href="">Бронирование</a></li>
+            <div class="main-header__user-navigation">
+              <a class="main-header__login-link" href="login.html">Вход</a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+        <script>
+          const hotelList = document.querySelector(`.hotels-list__selection`);
+          console.log(hotelList)
+          if (hotelList) {
+
+          }
+        </script>
+        <h3 class="text-h3 text-booking">Бронировать мугут только авторизованные пользователи, пожулайта авторизуйтесь!</h3><br>
+
+        <h3 class="text-h3 text-booking">Вы еще ничего не забронировали, сделать бронь можно во вкладке Гостиницы</h3><br>
+
+        <h3 class="text-h3 text-booking--active">Забронированные гостиницы:</h3><br>
+        <section>
+          <ul class="hotels-list__selection">
+            <li class="hotels-list__hotel-all">
+                <div class="hotels-list__hotel">
+                  <a href="" class="hotels-list__hotel-image"><img src="" width="135" height="90" alt="Гостиница"></a>
+                  <div class="hotels-list__main">
+                    <div class="hotels-list__main-description">
+                      <h3 class="visually-hidden">Название отеля</h3>
+                      <a class="hotels-list__hotel-name" href="">Название отеля</a>
+                      <p class="hotels-list__hotel-description">Тип</p>
+                      <p class="hotels-list__hotel-description hotels-list__hotel-price">От 5000 р.</p>
+                      <a href="" class="button-light-blue hotels-list__detail-button">Подробнее</a>
+                      <button type="button" class="button-brown hotels-list__reservation-button">Отменить бронь</button>
+                    </div>
+                  </div>
+                    <div class="hotels-list__rating">
+                      <p class="hotels-list__rating-text">Рейтинг: 9.1</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </section>
+    </main>
+
+    <footer  class="main-footer">
+      <div class="container">
+        <section class="main-footer__info">
+          <b class="main-footer__hashtag">#Fasthotels</b>
+          <b><a href="tel:+74956660166">Тел: +7 (499) 111-01-11</a></b>
+        </section>
+        <section>
+          <ul class="main-footer__social-list">
+            <li>
+              <a class="main-footer__social-item" href="" >
+                <span class="visually-hidden">Twitter</span>
+                <svg width="17" height="15" viewBox="0 0 17 15">
+                  <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="main-footer__social-item" href="">
+                <span class="visually-hidden">Facebook</span>
+                <svg width="12" height="22" viewBox="0 0 12 22">
+                  <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="main-footer__social-item" href="">
+                <span class="visually-hidden">Youtube</span>
+                <svg width="20" height="16" viewBox="0 0 20 16">
+                  <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="main-footer__copyright">
+          <p class="main-footer__website-by">Website by</p>
+          <a class="main-footer__htmla-logo" href="">
+              <img src="img/camel.svg">
+          </a>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

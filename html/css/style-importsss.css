@@ -1,0 +1,228 @@
+@import "main-elements.css";
+@import "buttons.css";
+
+@import "main-header.css";
+
+@import "reasons.css";
+@import "fast-hotels.css";
+@import "alleged-dates.css";
+@import "search-hotels.css";
+
+@import "criterion.css";
+@import "search-filters.css";
+@import "hotels-list.css";
+
+@import "footer.css";
+
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.text-h3 {
+  font-size: 21px;
+  margin: 0 auto;
+}
+
+
+
+/* BOOKING */
+
+.text-booking {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 900px;
+}
+
+.text-booking--active {
+  text-align: left;
+}
+
+
+/* CONTACTS */
+
+.contacts {
+  margin-top: 15px;
+}
+
+.contacts__table td:nth-child(2n-1) {
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.contacts__table td:nth-child(2n) {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+.section-map {
+  background-image: url(../img/map2.jpg);
+}
+
+.search-hotels {
+  position: relative;
+}
+
+.section-login-form {
+  background-color: var(--basic-light-white);
+  max-width: 400px;
+  padding: 30px;
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background-color: var(--basic-light-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal-login {
+  display: none;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: auto;
+  position: fixed;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: black;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.login-info {
+  max-width: 300px;
+  background-color: var(--basic-white);
+}
+
+.login-info input {
+  border: none;
+  background-color: transparent;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-left: 13px;
+}
+
+.button-log-in {
+  font-weight: bold;
+  padding: 3px 15px;
+}
+
+.regestration {
+
+  line-height: 26px;
+  padding: 6px 15px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+
+.section-date-form {
+  display: flex;
+  max-width: 568px;
+}
+
+.modal-date {
+  display: none;
+  top: 86px;
+
+  bottom: auto;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  70% {
+    transform: translateX(-50%) translateY(20%);
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(10%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-60%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-40%);
+  }
+}

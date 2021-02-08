@@ -7,47 +7,15 @@
     <link href="css/style-importsss.css" rel="stylesheet">
   </head>
   <body class="page-body">
-
-    <?php
-      // require('php/bd.php');
-      // $query = "SELECT * FROM hotels";
-      // $where = "";
-      // $hotels_types = array();
-      // foreach (array('Гостиница', 'Хостел', 'Апартаменты') as $hotel_type){
-      //   if ($_GET[$hotel_type]) $hotels_types[] = '"' . $hotel_type . '"';
-      // }
-      // if (count($hotels_types) > 0) $where = ' type IN (' . implode(',', $hotels_types) . ')';
-      // if ($_GET['max-cost']) {
-      //   if (strlen($where) > 0) $where .= " AND";
-      //   $where =  $where . " price <= " . $_GET['max-cost'];
-      // }
-      // if ($_GET['min-cost']) {
-      //   if (strlen($where) > 0) $where .= " AND";
-      //   $where = $where . " price >=" . $_GET['min-cost'];
-      // }
-      // if (strlen($where) > 0) $query =  $query . ' WHERE' . $where;
-      // $result = mysql_query($query);
-      // $number_of_record = mysql_num_rows($result);
-
-      // $min_price_query = (strlen($where) === 0) ? "SELECT MIN(price) AS min FROM hotels" : "SELECT MIN(price) AS min FROM hotels" . ' WHERE' . $where;
-      // $max_price_query = (strlen($where) === 0) ? "SELECT MAX(price) AS max FROM hotels" : "SELECT MAX(price) AS max FROM hotels" . ' WHERE' . $where;
-      // $min_price = mysql_query($min_price_query);
-      // $max_price = mysql_query($max_price_query);
-      // $min_cost = mysql_fetch_array($min_price);
-      // $max_cost = mysql_fetch_array($max_price);
-      // $min_cost = $min_cost['min'];
-      // $max_cost = $max_cost['max'];
-    ?>
-
     <header class="main-header">
       <nav class="main-header__navigation">
         <div class="main-header__wrapper">
           <ul class="main-header__site-navigation container">
             <a href="" class="main-header__logo"><img src="img/logo3.png" width="200" height="70" alt="Логотип"></a>
-            <li><a href="index.php">Информация</a></li>
-            <li><a href="">Контакты</a></li>
-            <li class="main-header__navigation--active"><a href="catalog.php">Гостиницы</a></li>
-            <li><a href="">Отзывы</a></li>
+            <li><a href="index.html">Информация</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li class="main-header__navigation--active"><a href="">Гостиницы</a></li>
+            <li><a href="booking.html">Бронирование</a></li>
             <div class="main-header__user-navigation">
               <a class="main-header__login-link" href="login.html">Вход</a>
             </div>
@@ -64,15 +32,15 @@
             <legend class="criterion__type">Тип жилья:</legend>
             <ul class="criterion__checkboxes">
               <li class="criterion__checkbox">
-                <input class="visually-hidden criterion__input-checkbox" type="checkbox" id="filter-hotel" name="Гостиница" <?php if ($_GET['Гостиница'] == 'on') print('checked')?>>
+                <input class="visually-hidden criterion__input-checkbox" type="checkbox" id="filter-hotel" name="Гостиница">
                 <label for="filter-hotel" class="criterion__label-checkbox">Гостиница</label>
               </li>
               <li class="criterion__checkbox">
-                <input class="visually-hidden criterion__input-checkbox" type="checkbox" id="filter-motel" name="Хостел" <?php if ($_GET['Хостел'] == 'on') print('checked')?>>
+                <input class="visually-hidden criterion__input-checkbox" type="checkbox" id="filter-motel" name="Хостел">
                 <label for="filter-motel" class="criterion__label-checkbox">Хостел</label>
               </li>
               <li class="criterion__checkbox">
-                <input class="visually-hidden criterion__input-checkbox" type="checkbox" id="filter-apartments" name="Апартаменты" <?php if ($_GET['Апартаменты'] == 'on') print('checked')?>>
+                <input class="visually-hidden criterion__input-checkbox" type="checkbox" id="filter-apartments" name="Апартаменты">
                 <label for="filter-apartments" class="criterion__label-checkbox">Апартаменты</label>
               </li>
             </ul>
@@ -106,7 +74,7 @@
       <section class="search-filters">
         <div class="search-filters__filters">
           <div class="search-filters__search">
-            <p class="search-filters__found">Найдено: <?= $number_of_record ?></p>
+            <p class="search-filters__found">Найдено: </p>
 
           </div>
           <div class="search-filters__buttons-up-down">
@@ -118,12 +86,6 @@
 
       <section>
         <ul class="hotels-list__selection">
-          <?php
-            //   while ($row = mysql_fetch_array($result)) {
-            //     printf (
-            //   '', $row['img'], $row['name'], $row['name'], $row['type'], $row['price'], $row['hotels-list__rating']);
-            // }
-          ?>
           <li class="hotels-list__hotel-all">
               <div class="hotels-list__hotel">
                 <a href="" class="hotels-list__hotel-image"><img src="" width="135" height="90" alt="Гостиница"></a>
