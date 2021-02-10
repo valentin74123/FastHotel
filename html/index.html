@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html  class="page" lang="ru">
   <head>
@@ -14,26 +11,22 @@
 
     <header class="main-header">
       <nav class="main-header__navigation">
-
         <div class="main-header__wrapper">
-          <ul class="main-header__site-navigation container">
+          <ul class="main-header__site-navigation">
             <a href="" class="main-header__logo"><img src="img/logo3.png" width="200" height="70" alt="Логотип"></a>
-            <li class="main-header__navigation--active"><a href="index.php">Информация</a></li>
+            <li class="main-header__navigation--active"><a href="">Информация</a></li>
             <li><a href="contacts.html">Контакты</a></li>
             <li><a href="catalog.html">Гостиницы</a></li>
             <li><a href="booking.html">Бронирование</a></li>
             <div class="main-header__user-navigation">
               <a class="main-header__login-link" href="login.html">Вход</a>
-              <?php
-                echo $_SESSION['user'];
-              ?>
             </div>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="">
       <article class="fasthotels__image-bg"><img class="fasthotels__img" src="img/logo2.png" width="400" alt=""></article>
       <h1 class="visually-hidden">FastHotels</h1>
       <section class="fasthotels">
@@ -44,14 +37,16 @@
         <ul class="reasons__list">
           <li>
             <article class="reasons__reason">
-              <div class="reasons__resons-text">
-                <h3 class="text-h3 reasons__resons-text-h3">Выгодные предложения</h3>
-                <p class="reasons__resons-text-p reasons__resons-text-p-first">У нас особые договоренности с лучшими отелями в Челябинске. И они предоставляют нам самые низкие цены. А мы делимся с вами!</p>
-              </div>
-              <div class="reasons__photo-chelyabinsk">
-                <a href="">
-                  <img src="img/city-sedona.jpg" width="800" height="256" alt="Город Седона">
-                </a>
+              <div class="reasons__reason-wrapper">
+                <div class="reasons__resons-text">
+                  <h3 class="text-h3 reasons__resons-text-h3">Выгодные предложения</h3>
+                  <p class="reasons__resons-text-p reasons__resons-text-p-first">У нас особые договоренности с лучшими отелями в Челябинске. И они предоставляют нам самые низкие цены. А мы делимся с вами!</p>
+                </div>
+                <div class="reasons__photo-chelyabinsk">
+                  <a href="">
+                    <img src="img/city-sedona.jpg" width="800" height="256" alt="Город Седона">
+                  </a>
+                </div>
               </div>
             </article>
           </li>
@@ -80,14 +75,16 @@
 
           <li>
             <article class="reasons__reason second-reasons__reason">
-              <div class="reasons__photo-chelyabinsk">
-                <a href="">
-                  <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
-                </a>
-              </div>
-              <div class="reasons__resons-text">
-                <h3 class="text-h3 reasons__resons-text-h3">Знайте об отеле всё</h3>
-                <p class="reasons__resons-text-p reasons__resons-text-p-second">Рейтинг на основе настоящих отзывов гостей, год постройки и последнего ремонта, реальные фотографии от постояльцев</p>
+              <div class="reasons__reason-wrapper">
+                <div class="reasons__photo-chelyabinsk">
+                  <a href="">
+                    <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
+                  </a>
+                </div>
+                <div class="reasons__resons-text">
+                  <h3 class="text-h3 reasons__resons-text-h3">Знайте об отеле всё</h3>
+                  <p class="reasons__resons-text-p reasons__resons-text-p-second">Рейтинг на основе настоящих отзывов гостей, год постройки и последнего ремонта, реальные фотографии от постояльцев</p>
+                </div>
               </div>
             </article>
           </li>
@@ -97,12 +94,12 @@
       <section class="alleged-dates">
         <article class="alleged-dates__text">
           <p class="alleged-dates__interested-in">Заинтересовались?</p>
-          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучщие предложения гостиниц в Челябинске</p>
+
         </article>
-        <div class="search-hotels">
 
-          <button class="button-brown button-interested-in">Поиск гостиницы</button>
+        <a href="catalog.html"><button class="button-brown button-interested-in">Поиск гостиницы</button></a>
 
+        <!-- <div class="search-hotels">
           <section class="modal modal-date section-date-form">
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
             <form class="date-form" action="https://echo.htmlacademy.ru" method="POST">
@@ -154,13 +151,7 @@
               </button>
             </form>
           </section>
-        </div>
-      </section>
-
-      <section class="section-map">
-        <h2 class="visually-hidden">Карта</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d145899.63940781192!2d61.29318999967121!3d55.15384565116218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592cb104a3a8d%3A0xef224a2a6d1711bf!2z0KfQtdC70Y_QsdC40L3RgdC6LCDQp9C10LvRj9Cx0LjQvdGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1593275123666!5m2!1sru!2sru"
-        width="1199" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Карта"></iframe>
+        </div> -->
       </section>
     </main>
 

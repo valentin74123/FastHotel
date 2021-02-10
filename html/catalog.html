@@ -10,7 +10,7 @@
     <header class="main-header">
       <nav class="main-header__navigation">
         <div class="main-header__wrapper">
-          <ul class="main-header__site-navigation container">
+          <ul class="main-header__site-navigation">
             <a href="" class="main-header__logo"><img src="img/logo3.png" width="200" height="70" alt="Логотип"></a>
             <li><a href="index.html">Информация</a></li>
             <li><a href="contacts.html">Контакты</a></li>
@@ -24,7 +24,7 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="">
       <section class="criterion">
        <h2 class="visually-hidden">Критерии жилья</h2>
        <form action="catalog.php" method="GET" class="criterion__form">
@@ -45,6 +45,16 @@
               </li>
             </ul>
           </fieldset>
+          <fieldset><label for="adults">Взрослые:</label>
+            <div class="number-of-people">
+              <button class="button-minus" type="button">
+                <span class="visually-hidden">-</span>
+              </button>
+              <input type="number" id="adults" name="adults" min="1" value="1">
+              <button class="button-plus" type="button">
+                <span class="visually-hidden">+</span>
+              </button>
+            </div></fieldset>
         <fieldset class="criterion__fieldset-days  criterion__fieldset">
           <legend  class="criterion__type">Стоимость в сутки (р):</legend>
             <div class="criterion__range-filter">
@@ -75,7 +85,11 @@
         <div class="search-filters__filters">
           <div class="search-filters__search">
             <p class="search-filters__found">Найдено: </p>
-
+            <p class="sorting">Сортировка:</p>
+            <ul class="filters">
+              <li class="sorting-filters sorting-filters-active"><a href="">По цене</a></li>
+              <li class="sorting-filters"><a href="">По рейтингу</a></li>
+            </ul>
           </div>
           <div class="search-filters__buttons-up-down">
             <button class="search-filters__button-up-down"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg></button>
@@ -93,12 +107,14 @@
                   <div class="hotels-list__main-description">
                     <h3 class="visually-hidden">Название отеля</h3>
                     <a class="hotels-list__hotel-name" href="">Название отеля</a>
-                    <p class="hotels-list__hotel-description">Тип</p>
+                    <p class="hotels-list__hotel-description">2-4 чел.</p>
                     <p class="hotels-list__hotel-description hotels-list__hotel-price">От 5000 р.</p>
                     <a href="" class="button-light-blue hotels-list__detail-button">Подробнее</a>
                     <button type="button" class="button-brown hotels-list__reservation-button">Забронировать</button>
                   </div>
                 </div>
+                <div>
+                  <p class="hotels-list__hotel-description">Тип</p>
                   <div class="hotels-list__rating">
                     <p class="hotels-list__rating-text">Рейтинг: 9.1</p>
                   </div>

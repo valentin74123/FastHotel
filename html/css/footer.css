@@ -1,5 +1,5 @@
 .main-footer .container {
-    margin-top: -20px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: var(--basic-light-white);
@@ -21,15 +21,15 @@
     justify-content: center;
     flex-direction: column;
 }
-  
+
 .main-footer__hashtag {
     padding-bottom: 9px;
 }
-  
+
 .main-footer__info a {
     color: var(--basic-dark-black);
 }
-  
+
 .main-footer__social-list {
     display: flex;
     margin: 0 auto;
@@ -41,7 +41,7 @@
     flex-wrap: wrap;
     list-style: none;
 }
-  
+
 .main-footer__social-item {
     font: inherit;
     text-align: center;
@@ -56,54 +56,54 @@
     align-items: center;
     justify-content: center;
 }
-  
+
 .main-footer__social-item:hover,
 .main-footer__social-item:focus{
     background-color: var(--basic-blue);
 }
-  
+
 .main-footer__social-item:active {
     background-color: var(--basic-dark-blue);
 }
-  
+
 .main-footer__social-item:active path {
     opacity: 0.3;
 }
-  
+
 .main-footer__social-item a {
     padding-top: 5px;
 }
-  
+
 .main-footer__htmla-logo path {
-    width: 115px; 
+    width: 115px;
     height: 41px;
     fill: var(--basic-dark-black2);
 }
-  
+
 .main-footer__copyright {
     display: flex;
     margin: 0;
     justify-self: end;
     padding-right: 138px;
 }
-  
+
 .main-footer__website-by {
     margin: 0px;
     padding-top: 49px;
     padding-bottom: 45px;
     padding-right: 8px;
 }
-  
+
 .main-footer__htmla-logo {
     padding-top: 37px;
     padding-bottom: 35px;
 }
-  
+
 .main-footer__htmla-logo:hover path,
 .main-footer__htmla-logo:focus path {
     fill: var(--basic-light-blue);
 }
-  
-.main-footer__htmla-logo:active path { 
+
+.main-footer__htmla-logo:active path {
     fill: var(--basic-light-gray);
 }
