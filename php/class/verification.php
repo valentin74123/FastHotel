@@ -29,7 +29,7 @@
             if ($password_md5 === $password_md5_authorization && password_verify($password, $password_bcrypt)) {
                 $_SESSION['reg'] = $login;
                 $_SESSION['user'] = "<b>$login</b> <a href='index.php'>Выйти</a><br>".$_SESSION['reg'];
-                header("Location: index.php");
+                header("Location: ../index.html");
             } else {
                 $_SESSION['message'] = 'Неверный логин или пароль.<br>';
                 header("Location: index.php");

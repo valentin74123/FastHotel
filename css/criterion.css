@@ -2,6 +2,8 @@
   color: var(--basic-light-white);
   background-image: url(../img/background-catalog2.jpg);
   background-color: var(--basic-light-blue);
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
   line-height: 21px;
 }
 
@@ -12,10 +14,20 @@
   max-width: 1055px;
 }
 
+@media (max-width: 1200px) {
+  .criterion__form {
+    max-width: 800px;
+  }
+}
+
 .criterion__fieldset {
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+.criterion__fieldset:nth-child(2) {
+  margin-left: 50px;
 }
 
 .fieldset-checkboxes {
@@ -48,6 +60,10 @@
 .criterion__checkbox {
   padding-top: 25px;
   padding-left: 45px;
+}
+
+.criterion__number-of-people {
+  margin-top: 22px;
 }
 
 .criterion__checkbox label {
@@ -93,46 +109,82 @@
   border-radius: 5px;
 }
 
-.scale {
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.3);
-  mix-blend-mode: normal;
+.slider {
+    -webkit-appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--basic-light-white);
+    outline: none;
 }
 
-.bar {
-  width: 75%;
-  height: 2px;
-  background-color: var(--basic-light-white);
+.slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 25%;
+    top: 15px;
+    width: 50%;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
 }
 
-.range-controls .toggle {
-  position: absolute;
-  top: 11px;
-  left: 0;
-  width: 20px;
-  height: 22px;
-  padding: 0;
-  background-image: url(../img/filter-button.svg);
-  cursor: pointer;
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 22px;
+    padding: 0;
+    background-image: url(../img/filter-button.svg);
+    cursor: pointer;
+
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
 }
 
-.range-controls .toggle-min:hover,
-.range-controls .toggle-min:focus {
+.slider::-webkit-slider-thumb:hover {
   transform: scale(1.2);
 }
 
-.range-controls .toggle-max:hover,
-.range-controls .toggle-max:focus {
-  transform: scale(1.2);
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ea4550;
+    cursor: pointer;
+
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
 }
 
-.range-controls .toggle-min {
-  left: 0;
+.slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    border: 0;
+}
+.slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+.slider input[type=range]::-moz-focus-outer {
+  border: 0;
 }
 
-.range-controls .toggle-max {
-  left: 233px;
+
+.range-controls {
+  position: relative;
+  margin-bottom: 33px;
+  padding-top: 20px;
+  border-radius: 5px;
 }
+
 
 .criterion__price-controls {
   display: flex;

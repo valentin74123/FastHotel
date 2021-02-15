@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+              .slider {
+                  -webkit-appearance: none;
+
+                  position: absolute;
+                  width: 75%;
+                  height: 2px;
+                  background-color: red; /* var(--basic-light-white) */
+                  outline: none;
+
+              }
+
+              .slider input {
+                  pointer-events: none;
+                  position: absolute;
+                  overflow: hidden;
+                  left: 25%;
+                  top: 15px;
+                  width: 50%;
+                  outline: none;
+                  height: 18px;
+                  margin: 0;
+                  padding: 0;
+
+              }
+
+              .slider::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 20px;
+                  height: 22px;
+                  padding: 0;
+                  background-image: url(./img/filter-button.svg);
+                  cursor: pointer;
+
+                  pointer-events: all;
+                  position: relative;
+                  z-index: 1;
+                  outline: 0;
+              }
+
+              .slider::-webkit-slider-thumb:hover {
+                transform: scale(1.2);
+              }
+
+              .slider::-moz-range-thumb {
+                  width: 20px;
+                  height: 20px;
+                  background: #ea4550;
+                  cursor: pointer;
+
+                  pointer-events: all;
+                  position: relative;
+                  z-index: 10;
+                  -moz-appearance: none;
+                  width: 9px;
+              }
+
+              .slider input::-moz-range-track {
+                  position: relative;
+                  z-index: -1;
+                  border: 0;
+              }
+              .slider input:last-of-type::-moz-range-track {
+                  -moz-appearance: none;
+                  background: none transparent;
+                  border: 0;
+              }
+              .slider input[type=range]::-moz-focus-outer {
+                border: 0;
+              }
+
+
+
+
+
+              .range-controls {
+                position: relative;
+                margin-bottom: 33px;
+                padding-top: 20px;
+                border-radius: 5px;
+              }
+
+
+
+
+
+
+
+
+
+
+  </style>
+<script>
+// function fun1() {
+//   var rng=document.getElementById('r1'); //rng - это Input
+//   var p=document.getElementById('one'); // p - абзац
+//   p.innerHTML=rng.value;
+// }
+
+</script>
+</head>
+<body>
+
+  <!-- <input type="range" id="r1" oninput="fun1()">
+  <p id="one"></p>
+  <input type="range"> -->
+  <input type="range" min="12" max="2175" value="12" class="slider" id="lower">
+  <input type="range" min="12" max="2175" value="2175" class="slider" id="higher">
+
+  <!-- <div class="range-controls">
+    <div class="scale">
+      <div class="bar"></div>
+    </div>
+    <div class="toggle toggle-min"></div>
+    <div class="toggle toggle-max"></div>
+  </div> -->
+
+</body>
+</html>

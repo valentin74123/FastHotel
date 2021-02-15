@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Fast Hotels</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <link href="css/normalize.css" rel="stylesheet"> -->
-    <link href="css/style-importsss.css" rel="stylesheet">
+    <link href="./css/style-importsss.css" rel="stylesheet">
   </head>
   <body class="page-body">
 
@@ -19,7 +18,7 @@
             <li><a href="catalog.html">Гостиницы</a></li>
             <li><a href="booking.html">Бронирование</a></li>
             <div class="main-header__user-navigation">
-              <a class="main-header__login-link" href="login.html">Вход</a>
+              <a class="main-header__login-link" href="php/index.php">Вход</a>
             </div>
           </ul>
         </div>
@@ -197,46 +196,6 @@
         </section>
       </div>
     </footer>
-
-
-
-    <section class="section-login-form modal-login">
-      <h2>Личный кабинет</h2>
-      <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
-      <form class="login-form" method="POST" action="php/verification.php">
-        <p class="login-info">
-          <label class="visually-hidden" for="login-login">Логин</label>
-          <input class="login-icon-user" id="login-login" type="text" name="login" placeholder="qwerty" required>
-        </p>
-
-        <font color="red">
-    			<?php
-    				echo $_SESSION['message'];
-    				unset($_SESSION['message']);
-    			?>
-    		</font>
-
-        <p class="login-info">
-          <label class="visually-hidden" for="login-password">Пароль</label>
-          <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••" required>
-        </p>
-
-        <p>
-          <button type="submit" class="button-light-blue button-log-in">Войти</button>
-
-          <a href="login.php" class="button-brown regestration">Зарегистрироваться</a><br>
-        </p>
-
-        <?php
-            echo session_id().'<br>';
-            echo $_SESSION['login'];
-        ?>
-      </form>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
-    </section>
-
-
-    <script src="js/search-hotel.js"></script>
-
+    <!-- <script src="js/search-hotel.js"></script> -->
   </body>
 </html>

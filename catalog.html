@@ -45,35 +45,35 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset><label for="adults">Взрослые:</label>
-            <div class="number-of-people">
+          <fieldset  class="criterion__fieldset">
+            <legend class="criterion__type">Количество мест:</legend>
+            <label class="visually-hidden" for="adults">Количество мест:</label>
+            <div class="criterion__number-of-people number-of-people">
               <button class="button-minus" type="button">
                 <span class="visually-hidden">-</span>
               </button>
-              <input type="number" id="adults" name="adults" min="1" value="1">
+              <input class="count-of-people" type="number" id="adults" name="adults" min="1" value="1">
               <button class="button-plus" type="button">
                 <span class="visually-hidden">+</span>
               </button>
-            </div></fieldset>
+            </div>
+          </fieldset>
         <fieldset class="criterion__fieldset-days  criterion__fieldset">
           <legend  class="criterion__type">Стоимость в сутки (р):</legend>
             <div class="criterion__range-filter">
               <div class="criterion__price-controls">
                 <div class="min">
                   <label class="min-cost" for="min-cost">От</label>
-                  <input type="number" id="min-cost" name="min-cost" value="<?=$min_cost ?>">
+                  <input type="number" id="min-cost" name="min-cost" value="500"> <?=$min_cost ?>
                 </div>
                 <div>
                   <label class="max-cost" for="max-cost">До</label>
-                  <input type="number" id="max-cost" name="max-cost" value=""> <?=$max_cost ?>
+                  <input type="number" id="max-cost" name="max-cost" value="10000"> <?=$max_cost ?>
                 </div>
               </div>
               <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
-                </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <input type="range" min="500" max="10000" value="0" class="slider" id="lower">
+                <input type="range" min="500" max="10000" value="10000" class="slider" id="higher">
               </div>
             </div>
           <button type="submit" class="button-white criterion__show-button">Показать</button>
@@ -168,31 +168,7 @@
       </div>
     </footer>
 
-    <section class="section-login-form modal-login">
-      <h2>Личный кабинет</h2>
-      <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
-      <form class="login-form" action="php/testreg.php" method="post">
-        <p class="login-info">
-          <label class="visually-hidden" for="login-login">Логин</label>
-          <input class="login-icon-user" id="login-login" type="text" name="login" placeholder="qwerty">
-        </p>
-        <!--**** В текстовое поле (name="login" type="text") пользователь вводит свой логин ***** -->
-        <p class="login-info">
-          <label class="visually-hidden" for="login-password">Пароль</label>
-          <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
-        </p>
-        <!--В поле для паролей (name="password" type="password") пользователь вводит свой пароль-->
-        <p>
-          <input class="button-light-blue button-log-in" type="submit" name="submit" value="Войти">
-          <!-- Кнопка (type="submit") отправляет данные на страничку testreg.php -->
-
-          <!--ссылка на регистрацию  -->
-          <a href="php/reg.php" class="button-brown regestration">Регистрация</a>
-        </p>
-      </form>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
-    </section>
-
-
+    <script src="js/count-people.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

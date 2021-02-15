@@ -8,8 +8,7 @@
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             );
 
-            $this->connection = new PDO('mysql:host=localhost;
-            dbname=dzpas; charset=utf8', 'root', 'root', $options); //root
+            $this->connection = new PDO('mysql:host=localhost;dbname=dzpas;charset=utf8', 'root', 'root', $options);
         }
 
         public function insert(string $table, $values) {

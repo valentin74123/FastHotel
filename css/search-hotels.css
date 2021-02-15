@@ -12,7 +12,7 @@
     align-items: center;
 }
   
-.date-item button {
+/* .date-item button {
     border: none;
     background-color: transparent;
 }
@@ -43,54 +43,64 @@
   
 .calendar-button:active path {
     fill: var(--basic-light-blue);
+} */
+
+.button-minus,
+.button-plus {
+    background-color: transparent; 
+    border: 1px solid var(--basic-white);
 }
-  
+
+.button-minus:hover {
+    border: 1px solid black;
+}
+
 .number-of-people {
     position: relative;
-    background-color: var(--basic-white);
+    background-color: transparent;
     min-width: 114px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
   
 .number-of-people input {
-    width: 36px;
+    width: 39px;
     padding-top: 6px;
     padding-bottom: 6px;
     text-align: center;
-    color: #283136;
-    border: none;
-    margin: 0 auto;
+    color: var(--basic-white);
+    border: 1px solid var(--basic-white);
+    background-color: transparent;
 }
   
 .button-minus::before {
     position: absolute;
     content: "";
-    top: 18px;
+    top: 12px;
     left: 13px;
     width: 12px;
     height: 3px;
-    background-color: var(--basic-gray);
+    background-color: var(--basic-white);
 }
   
 .button-plus::before {
     position: absolute;
     content: "";
-    top: 14px;
+    top: 8px;
     left: 93px;
     width: 3px;
     height: 11px;
-    background-color: var(--basic-gray);
+    background-color: var(--basic-white);
 }
   
 .button-plus::after {
     position: absolute;
     content: "";
-    top: 18px;
+    top: 12px;
     left: 89px;
     width: 11px;
     height: 3px;
-    background-color: var(--basic-gray);
+    background-color: var(--basic-white);
 }
   
 .button-minus:hover::before,
@@ -99,13 +109,13 @@
 .button-plus:focus::before,
 .button-plus:hover::after,
 .button-plus:focus::after {
-    background-color: var(--basic-dark-black);
+    background-color: var(--basic-gray);
 }
   
 .button-minus:active::before,
 .button-plus:active::before,
 .button-plus:active::after {
-   background-color: var(--basic-dark-blue);
+   background-color: var(--basic-dark-black)
 }
   
 .date-form input[type="text"],
@@ -135,11 +145,7 @@
 .number-of-people {
     max-width: 114px;
 }
-  
-.number-of-people input {
-    background-color: var(--basic-white);
-}
-  
+   
 .button-light-blue-search {
     min-width: 458px;
     padding: 16px 0;
